@@ -43,7 +43,8 @@
         color: #ff6b6b;
         font-style: italic;
         font-weight: bold;
-        cursor: help;
+        cursor: pointer;
+        position: relative;
       }
       .idea-emoji {
         position: relative;
@@ -69,6 +70,31 @@
         transition: opacity 0.3s ease, transform 0.3s ease;
         z-index: 10;
         pointer-events: none;
+      }
+      .tooltiptext {
+        visibility: hidden;
+        opacity: 0;
+
+        width: max-content;
+        max-width: 200px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 6px 10px;
+        border-radius: 6px;
+
+        position: absolute;
+        z-index: 10;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        transition: opacity 0.3s ease;
+      }
+
+      .error.active .tooltiptext {
+        visibility: visible;
+        opacity: 1;
       }
       .idea-emoji:hover .tooltip {
         visibility: visible;
@@ -110,8 +136,9 @@
       <span class="timestamp">Nov 25 19:41:48</span>
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
-        >sper sa <span class="error" title="fii">fi</span> primul împușcat de
-        ruși dorian_ :))))</span
+        >sper sa
+        <span class="error">fi<span class="tooltiptext">fii</span></span> primul
+        împușcat de ruși dorian_ :))))</span
       >
     </div>
 
@@ -119,9 +146,11 @@
       <span class="timestamp">Nov 25 19:42:11</span>
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
-        >dar <span class="error" title="sa te">s te</span> muște în ficat și să
-        rămâi lat <span class="error" title="vreo">vre-o</span> 3 4
-        ore:)))</span
+        >dar
+        <span class="error">s te<span class="tooltiptext">sa te</span></span>
+        muște în ficat și să rămâi lat
+        <span class="error">vre-o<span class="tooltiptext">vreo</span></span> 3
+        4 ore:)))</span
       >
     </div>
 
@@ -236,8 +265,8 @@
       <span class="timestamp">Nov 25 20:00:21</span>
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
-        ><span class="error" title="haide">hai de</span> mă să fim
-        serioași</span
+        ><span class="error">hai de<span class="tooltiptext">haide</span></span>
+        mă să fim serioași</span
       >
     </div>
 
@@ -251,7 +280,9 @@
       <span class="timestamp">Nov 25 20:00:36</span>
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
-        ><span class="error" title="lasa ma / lasa-ma">lasă mă</span>dreac</span
+        ><span class="error"
+          >lasă mă<span class="tooltiptext">lasa ma / lasa-ma</span></span
+        >dreac</span
       >
     </div>
 
@@ -259,10 +290,13 @@
       <span class="timestamp">Nov 25 20:01:10</span>
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
-        >toți <span class="error" title="retardații">retarzii</span> sunt pe
-        TikTok să-și facă reclame, ca
-        <span class="error" title="știu">stie</span> că e lume și se uită la
-        ei</span
+        >toți
+        <span class="error"
+          >retarzii<span class="tooltiptext">retardatii</span></span
+        >
+        sunt pe TikTok să-și facă reclame, ca
+        <span class="error">stie<span class="tooltiptext">stiu</span></span> că
+        e lume și se uită la ei</span
       >
       <span class="idea-emoji"
         >💡
@@ -311,8 +345,11 @@
       <span class="timestamp">Nov 25 20:02:38</span>
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
-        >câți <span class="error" title="retardați">retarzi</span> totuși îl
-        votează</span
+        >câți
+        <span class="error"
+          >retarzi<span class="tooltiptext">retardatii</span></span
+        >
+        totuși îl votează</span
       >
     </div>
 
@@ -383,7 +420,8 @@
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
         >toti care au votat pe ceilalti
-        <span class="error" title="or">o</span> sa voteze pe elena</span
+        <span class="error">o<span class="tooltiptext">or</span></span> sa
+        voteze pe elena</span
       >
     </div>
 
@@ -479,10 +517,10 @@
       <span class="timestamp">Nov 25 20:14:57</span>
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
-        >dar calin<span
-          class="error"
-          title="Virgula intre subiect si predicat :))"
-          >,</span
+        >dar calin<span class="error"
+          >,<span class="tooltiptext"
+            >Virgula intre subiect si predicat :))</span
+          ></span
         >
         va duce tara de rapa</span
       >
@@ -509,7 +547,7 @@
       <span class="idea-emoji"
         >💡
         <span class="tooltip"
-          >Parca imi pare rau ca n-a iesit Simion acum :-< Desi, pentru fratii
+          >Acum parca imi pare rau ca n-a iesit Simion :-< Desi, pentru fratii
           nostri spanioli, ma bucur.</span
         >
       </span>
@@ -656,8 +694,9 @@
       <span class="timestamp">Nov 25 23:33:26</span>
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
-        >da, buna <span class="error" title="idee">ideie</span> Admv. esti
-        destept!</span
+        >da, buna
+        <span class="error">ideie<span class="tooltiptext">idee</span></span>
+        Admv. esti destept!</span
       >
     </div>
 
@@ -824,7 +863,9 @@
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
         >facem partidul
-        <span class="error" title="Umor involuntar :))">APOPO?</span></span
+        <span class="error"
+          >APOPO?<span class="tooltiptext">Umor involuntar :))</span></span
+        ></span
       >
     </div>
 
@@ -870,8 +911,8 @@
       <span class="timestamp">Jan 05 19:52:22</span>
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
-        >un retardat<span class="error" title="Iar virgula fara sens..."
-          >,</span
+        >un retardat<span class="error"
+          >,<span class="tooltiptext">Iar virgula fara sens</span></span
         >
         care atat stie, sa scrie texte de pe 3 conturi</span
       >
@@ -934,10 +975,11 @@
       <span class="username">&lt;TheGodFather&gt;</span>
       <span class="text"
         >sa speram ca da ban
-        <span
-          class="error"
-          title="Cui trebuie. Dar tu, pentru ca esti un manelist convins, 'dedici pentru toata lumea'"
-          >la cine trebuie</span
+        <span class="error"
+          >la cine trebuie<span class="tooltiptext"
+            >Cui trebuie. Dar tu, pentru ca esti un manelist convins, 'dedici
+            pentru toata lumea'</span
+          ></span
         ></span
       >
     </div>
@@ -1245,5 +1287,48 @@
       decat domnu' Gardescu (Puya, in cazul in care nu stiai cine-i Dragos
       Gardescu)!
     </p>
+
+    <p>
+      Post Scriptum: Dupa ce am terminat de aranjat pagina asta, am zis sa ma
+      duc la domnul owner si sa ii spun, in cel mai dragalas ton al meu (de
+      altfel cel natural, fiindca nu pot sa ma prefac) ca am terminat de
+      instrumentat dosarasul dansului. Dumnealui, cu toata priceperea si
+      educatia pe care-a avut-o, cu toata capacitatea cognitiva si cu tot
+      vocabularul adunat intr-o singura fraza ca-ntr-un pumn marunt de puradel
+      ignorat de mama, mi-a oferit aceasta replica de o mare valoare - pe care o
+      impartaseste cu producatorul ei:
+    </p>
+
+    <div class="responsive-image-container">
+      <img
+        src="https://i.ibb.co/8LJy62w1/Screenshot-from-2025-08-27-01-30-13.png"
+      />
+    </div>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const errorElements = document.querySelectorAll(".error");
+
+      errorElements.forEach((error) => {
+        error.addEventListener("click", (e) => {
+          e.stopPropagation();
+
+          error.classList.toggle("active");
+
+          errorElements.forEach((otherError) => {
+            if (otherError !== error) {
+              otherError.classList.remove("active");
+            }
+          });
+        });
+      });
+
+      document.addEventListener("click", () => {
+        errorElements.forEach((error) => {
+          error.classList.remove("active");
+        });
+      });
+    });
+  </script>
 </html>
